@@ -43,15 +43,15 @@ img {
   background:
     linear-gradient(
       90deg,
-      rgba(250,247,242,0.98) 0%,
-      rgba(250,247,242,0.94) 30%,
-      rgba(250,247,242,0.48) 50%,
-      rgba(250,247,242,0.16) 72%,
-      rgba(250,247,242,0.04) 100%
+      rgba(250,247,242,1) 0%,
+      rgba(250,247,242,0.98) 34%,
+      rgba(250,247,242,0.84) 50%,
+      rgba(250,247,242,0.34) 72%,
+      rgba(250,247,242,0.08) 100%
     ),
     url("HERO.png");
-  background-size: cover;
-  background-position: center 48%;
+  background-size: min(64vw, 1040px) auto;
+  background-position: right center;
   background-repeat: no-repeat;
 }
 
@@ -645,12 +645,12 @@ img {
     background:
       linear-gradient(
         90deg,
-        rgba(250,247,242,0.98),
-        rgba(250,247,242,0.85)
+        rgba(250,247,242,0.99),
+        rgba(250,247,242,0.88)
       ),
       url("HERO.png");
     background-size: cover;
-    background-position: center right;
+    background-position: 68% center;
   }
 
   .navbar {
@@ -738,13 +738,13 @@ img {
     background:
       linear-gradient(
         180deg,
-        rgba(250,247,242,0.96) 0%,
-        rgba(250,247,242,0.88) 45%,
-        rgba(250,247,242,0.76) 100%
+        rgba(250,247,242,0.98) 0%,
+        rgba(250,247,242,0.92) 42%,
+        rgba(250,247,242,0.84) 100%
       ),
       url("HERO.png");
     background-size: cover;
-    background-position: center right;
+    background-position: 58% center;
   }
 
   .hero-inner {
