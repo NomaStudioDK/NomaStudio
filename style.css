@@ -49,9 +49,9 @@ img {
       rgba(250,247,242,0.34) 72%,
       rgba(250,247,242,0.08) 100%
     ),
-    url("PICTURE4.png");
-  background-size: auto 640px;
-  background-position: 108% center;
+    url("hero-clean.png");
+  background-size: auto 690px;
+  background-position: 88% center;
   background-repeat: no-repeat;
 }
 
@@ -223,72 +223,11 @@ img {
   font-size: 0.9rem;
 }
 
-/* PORTFOLIO */
-.portfolio {
-  width: min(88%, 1100px);
-  margin: 0 auto;
-  padding: 70px 0;
-  text-align: center;
-}
-
-.portfolio-heading {
-  margin-bottom: 28px;
-}
-
-.portfolio-heading h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  line-height: 1.1;
-  font-weight: 600;
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.portfolio-card {
-  position: relative;
-  aspect-ratio: 1 / 1;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-
-.portfolio-card img {
-  height: 100%;
-  object-fit: cover;
-  transition: 0.5s ease;
-}
-
-.portfolio-card:hover img {
-  transform: scale(1.05);
-}
-
-.portfolio-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: flex-end;
-  padding: 18px;
-  background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.05));
-}
-
-.portfolio-overlay h3 {
-  color: #fff;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 1;
-  text-align: left;
-}
-
 /* PROCESS */
 .process {
   width: min(88%, 1050px);
   margin: 0 auto;
-  padding: 54px 0 64px;
+  padding: 64px 0;
   text-align: center;
 }
 
@@ -434,6 +373,7 @@ img {
 .value-image img {
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .value-content {
@@ -559,9 +499,9 @@ img {
         rgba(250,247,242,0.99),
         rgba(250,247,242,0.88)
       ),
-      url("PICTURE4.png");
+      url("hero-clean.png");
     background-size: cover;
-    background-position: 68% center;
+    background-position: 62% center;
   }
 
   .navbar {
@@ -579,7 +519,6 @@ img {
   }
 
   .benefit-grid,
-  .portfolio-grid,
   .process-timeline,
   .pricing-grid,
   .mini-values,
@@ -589,12 +528,9 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .portfolio {
-    width: 92%;
-  }
-
   .value-image img {
-    max-height: 320px;
+    max-height: 480px;
+    object-position: center 38%;
   }
 
   .mini-value {
@@ -648,9 +584,9 @@ img {
         rgba(250,247,242,0.92) 42%,
         rgba(250,247,242,0.84) 100%
       ),
-      url("PICTURE4.png");
+      url("hero-clean.png");
     background-size: cover;
-    background-position: 58% center;
+    background-position: 54% center;
   }
 
   .hero-inner {
@@ -672,11 +608,6 @@ img {
   .hero-buttons {
     flex-direction: column;
     max-width: 210px;
-  }
-
-  .portfolio-card {
-    max-width: 380px;
-    margin: 0 auto;
   }
 
   .process {
@@ -726,5 +657,4 @@ img {
   .contact-cards a {
     padding: 24px;
   }
-}
 }
