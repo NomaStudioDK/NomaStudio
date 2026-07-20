@@ -49,9 +49,9 @@ img {
       rgba(250,247,242,0.34) 72%,
       rgba(250,247,242,0.08) 100%
     ),
-    url("HERO.png");
-  background-size: min(64vw, 1040px) auto;
-  background-position: right center;
+    url("PICTURE4.png");
+  background-size: auto 640px;
+  background-position: 108% center;
   background-repeat: no-repeat;
 }
 
@@ -240,95 +240,6 @@ img {
   font-size: clamp(2rem, 3vw, 2.8rem);
   line-height: 1.1;
   font-weight: 600;
-}
-
-.portfolio-feature {
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  align-items: stretch;
-  text-align: left;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.62);
-  box-shadow: var(--shadow);
-  margin-bottom: 24px;
-}
-
-.feature-image {
-  position: relative;
-  min-height: 430px;
-  background: #eadfd2;
-}
-
-.feature-image > img {
-  position: absolute;
-  inset: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center 47%;
-}
-
-.feature-logo {
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-  width: 86px;
-  height: 86px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 6px solid rgba(250,247,242,0.92);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.16);
-  background: #fff;
-}
-
-.feature-logo img {
-  height: 100%;
-  object-fit: cover;
-}
-
-.feature-content {
-  padding: clamp(32px, 5vw, 58px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.feature-content h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.35rem, 4vw, 3.6rem);
-  line-height: 0.98;
-  font-weight: 600;
-  margin: 12px 0 18px;
-}
-
-.feature-content p:not(.section-label) {
-  color: var(--muted);
-  max-width: 560px;
-  font-size: 0.98rem;
-}
-
-.case-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 26px;
-}
-
-.case-tags span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 34px;
-  padding: 8px 12px;
-  border: 1px solid rgba(159, 117, 77, 0.28);
-  border-radius: 8px;
-  color: var(--ink-soft);
-  background: rgba(250,247,242,0.78);
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .portfolio-grid {
@@ -648,7 +559,7 @@ img {
         rgba(250,247,242,0.99),
         rgba(250,247,242,0.88)
       ),
-      url("HERO.png");
+      url("PICTURE4.png");
     background-size: cover;
     background-position: 68% center;
   }
@@ -668,7 +579,6 @@ img {
   }
 
   .benefit-grid,
-  .portfolio-feature,
   .portfolio-grid,
   .process-timeline,
   .pricing-grid,
@@ -681,10 +591,6 @@ img {
 
   .portfolio {
     width: 92%;
-  }
-
-  .feature-image {
-    min-height: 360px;
   }
 
   .value-image img {
@@ -742,7 +648,7 @@ img {
         rgba(250,247,242,0.92) 42%,
         rgba(250,247,242,0.84) 100%
       ),
-      url("HERO.png");
+      url("PICTURE4.png");
     background-size: cover;
     background-position: 58% center;
   }
@@ -771,19 +677,6 @@ img {
   .portfolio-card {
     max-width: 380px;
     margin: 0 auto;
-  }
-
-  .portfolio-feature {
-    max-width: 520px;
-    margin: 0 auto 22px;
-  }
-
-  .feature-image {
-    min-height: 320px;
-  }
-
-  .feature-content {
-    padding: 30px 24px 34px;
   }
 
   .process {
@@ -833,12 +726,5 @@ img {
   .contact-cards a {
     padding: 24px;
   }
-
-  .feature-image {
-    min-height: 270px;
-  }
-
-  .case-tags span {
-    font-size: 0.68rem;
-  }
+}
 }
