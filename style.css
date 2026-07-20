@@ -39,26 +39,27 @@ img {
 
 /* HERO TOP */
 .hero-section {
-  min-height: 720px;
+  min-height: 680px;
   color: #fff;
   background:
     linear-gradient(
       90deg,
-      rgba(6, 5, 4, 0.74) 0%,
-      rgba(18, 15, 12, 0.58) 34%,
-      rgba(18, 15, 12, 0.2) 62%,
-      rgba(18, 15, 12, 0.06) 100%
+      rgba(6, 5, 4, 0.88) 0%,
+      rgba(18, 15, 12, 0.72) 38%,
+      rgba(18, 15, 12, 0.36) 66%,
+      rgba(18, 15, 12, 0.16) 100%
     ),
     url("value-studio.png");
-  background-size: cover;
-  background-position: center center;
+  background-color: #17120d;
+  background-size: min(52vw, 680px) auto;
+  background-position: right 7vw center;
   background-repeat: no-repeat;
 }
 
 .navbar {
   width: min(92%, var(--max));
   margin: 0 auto;
-  padding: 54px 0 0;
+  padding: 42px 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,19 +68,34 @@ img {
 
 .brand {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  width: 96px;
-  height: 96px;
+  justify-content: center;
+  width: 94px;
+  height: 78px;
   flex: 0 0 auto;
+  color: #fff;
+  gap: 6px;
 }
 
 .brand img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: left center;
-  display: block;
-  filter: brightness(0) invert(1);
+  display: none;
+}
+
+.brand::before {
+  content: "NS";
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.35rem;
+  line-height: 0.8;
+  font-weight: 500;
+}
+
+.brand::after {
+  content: "NOMA STUDIO";
+  font-size: 0.48rem;
+  line-height: 1;
+  letter-spacing: 0.22em;
+  font-weight: 700;
 }
 
 .nav-links {
@@ -102,7 +118,7 @@ img {
 .hero-inner {
   width: min(92%, var(--max));
   margin: 0 auto;
-  min-height: 560px;
+  min-height: 520px;
   display: flex;
   align-items: center;
 }
@@ -131,7 +147,7 @@ img {
 
 .hero-text h1 {
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(3.35rem, 5.1vw, 5.4rem);
+  font-size: clamp(3rem, 4.4vw, 4.8rem);
   line-height: 0.98;
   font-weight: 600;
   max-width: 560px;
@@ -503,12 +519,12 @@ img {
     background:
       linear-gradient(
         90deg,
-        rgba(6, 5, 4, 0.78),
-        rgba(18, 15, 12, 0.38)
+        rgba(6, 5, 4, 0.86),
+        rgba(18, 15, 12, 0.48)
       ),
       url("value-studio.png");
-    background-size: cover;
-    background-position: 62% center;
+    background-size: auto 650px;
+    background-position: right -20px center;
   }
 
   .navbar {
@@ -562,8 +578,8 @@ img {
   }
 
   .brand {
-    width: 86px;
-    height: 86px;
+    width: 88px;
+    height: 72px;
   }
 
   .nav-links {
@@ -592,18 +608,18 @@ img {
         rgba(8, 7, 6, 0.88) 100%
       ),
       url("value-studio.png");
-    background-size: cover;
-    background-position: 58% center;
+    background-size: auto 560px;
+    background-position: center top;
   }
 
   .hero-inner {
-    min-height: 560px;
+    min-height: 540px;
     align-items: flex-end;
     padding-bottom: 54px;
   }
 
   .hero-text h1 {
-    font-size: 3.25rem;
+    font-size: 2.85rem;
     max-width: 420px;
   }
 
@@ -651,8 +667,8 @@ img {
   }
 
   .brand {
-    width: 78px;
-    height: 78px;
+    width: 80px;
+    height: 68px;
   }
 
   .nav-links {
