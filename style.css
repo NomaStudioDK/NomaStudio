@@ -584,12 +584,13 @@ img {
   grid-template-columns: 0.9fr 1.1fr;
   gap: 56px;
   width: min(84%, 1050px);
-  margin: 0 auto;
-  padding: 64px;
+  margin: 110px auto 0;
+  padding: 58px 62px;
   align-items: center;
-  background: var(--panel);
-  border: 1px solid var(--line);
+  background: rgba(255, 252, 247, 0.54);
+  border: 1px solid rgba(127, 87, 52, 0.14);
   border-radius: 8px;
+  box-shadow: 0 18px 55px rgba(32, 25, 19, 0.055);
 }
 
 .contact h2 {
@@ -620,7 +621,7 @@ img {
   padding: 24px 58px 24px 26px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 252, 247, 0.78);
+  background: rgba(255, 252, 247, 0.86);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
 
@@ -787,6 +788,7 @@ img {
 
   .contact {
     width: min(92%, var(--max));
+    margin-top: 72px;
   }
 }
 
@@ -880,7 +882,7 @@ img {
 
   .contact {
     gap: 28px;
-    padding: 34px;
+    padding: 32px 24px;
   }
 
   .footer {
