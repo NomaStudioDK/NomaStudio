@@ -86,6 +86,18 @@
       </div>
     </section>
 
+    <section class="visual-break reveal" aria-label="Visuel pause">
+      <div class="visual-break-image">
+        <img src="PICTURE2.png" alt="Elegant hjemmeside vist på laptop i varm minimalistisk styling" />
+      </div>
+
+      <div class="visual-break-text">
+        <p class="section-label">Visuel retning</p>
+        <h2>Et website skal ikke bare fungere. Det skal føles rigtigt for dit brand.</h2>
+        <a href="#priser">Se muligheder <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
     <section class="process reveal" id="proces">
       <p class="process-label">Sådan foregår samarbejdet</p>
 
@@ -209,23 +221,36 @@
       </div>
 
       <div class="contact-cards">
-        <a href="https://www.instagram.com/NomaStudioDk/" target="_blank" rel="noreferrer">
+        <a class="contact-card" href="https://www.instagram.com/NomaStudioDk/" target="_blank" rel="noreferrer">
           <span>Instagram</span>
           <strong>@NomaStudioDk</strong>
+          <span class="card-arrow" aria-hidden="true">→</span>
         </a>
 
-        <a href="https://www.instagram.com/NomaStudioDk/" target="_blank" rel="noreferrer">
+        <a class="contact-card" href="https://www.instagram.com/NomaStudioDk/" target="_blank" rel="noreferrer">
           <span>Send en besked</span>
           <strong>Kontakt mig på Instagram</strong>
+          <span class="card-arrow" aria-hidden="true">→</span>
         </a>
 
-        <a href="#priser">
+        <a class="contact-card" href="#priser">
           <span>Priser</span>
           <strong>Se pakker og startpriser</strong>
+          <span class="card-arrow" aria-hidden="true">→</span>
         </a>
       </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <a href="#top" class="footer-logo" aria-label="Noma Studio">
+      <img src="nomastudio-logo.png" alt="Noma Studio Web Design logo" />
+    </a>
+    <p>© 2026 Noma Studio</p>
+    <a href="https://www.instagram.com/NomaStudioDk/" target="_blank" rel="noreferrer">
+      Instagram
+    </a>
+  </footer>
 
   <script>
     const revealItems = document.querySelectorAll(".reveal");
