@@ -39,27 +39,27 @@ img {
 
 /* HERO TOP */
 .hero-section {
-  min-height: 680px;
+  min-height: 630px;
   color: #fff;
   background:
     linear-gradient(
       90deg,
-      rgba(6, 5, 4, 0.88) 0%,
-      rgba(18, 15, 12, 0.72) 38%,
-      rgba(18, 15, 12, 0.36) 66%,
-      rgba(18, 15, 12, 0.16) 100%
+      rgba(6, 5, 4, 0.9) 0%,
+      rgba(18, 15, 12, 0.76) 36%,
+      rgba(18, 15, 12, 0.42) 62%,
+      rgba(18, 15, 12, 0.18) 100%
     ),
     url("value-studio.png");
   background-color: #17120d;
-  background-size: min(52vw, 680px) auto;
-  background-position: right 7vw center;
+  background-size: min(46vw, 590px) auto;
+  background-position: right 8vw center;
   background-repeat: no-repeat;
 }
 
 .navbar {
   width: min(92%, var(--max));
   margin: 0 auto;
-  padding: 42px 0 0;
+  padding: 34px 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -118,13 +118,13 @@ img {
 .hero-inner {
   width: min(92%, var(--max));
   margin: 0 auto;
-  min-height: 520px;
+  min-height: 500px;
   display: flex;
   align-items: center;
 }
 
 .hero-text {
-  max-width: 520px;
+  max-width: 500px;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.42);
 }
 
@@ -147,15 +147,19 @@ img {
 
 .hero-text h1 {
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(3rem, 4.4vw, 4.8rem);
-  line-height: 0.98;
+  font-size: clamp(3rem, 4.1vw, 4.35rem);
+  line-height: 1.01;
   font-weight: 600;
-  max-width: 560px;
+  max-width: 500px;
   margin-bottom: 20px;
 }
 
-.hero-text h1 em {
+.hero-text h1 em,
+.hero-text h1 span {
   display: block;
+}
+
+.hero-text h1 em {
   font-style: italic;
   color: rgba(255, 255, 255, 0.94);
   font-weight: 500;
@@ -199,7 +203,7 @@ img {
 .benefits {
   width: min(92%, var(--max));
   margin: 0 auto;
-  padding: 50px 0 60px;
+  padding: 44px 0 48px;
 }
 
 .center {
@@ -250,7 +254,7 @@ img {
 .process {
   width: min(88%, 1050px);
   margin: 0 auto;
-  padding: 64px 0;
+  padding: 46px 0 54px;
   text-align: center;
 }
 
@@ -316,7 +320,7 @@ img {
 .pricing {
   width: min(92%, var(--max));
   margin: 0 auto;
-  padding: 42px 0 60px;
+  padding: 48px 0 54px;
   text-align: center;
 }
 
@@ -388,11 +392,11 @@ img {
 /* VALUE */
 .value-contact {
   display: grid;
-  grid-template-columns: minmax(300px, 420px) 1fr;
+  grid-template-columns: minmax(280px, 380px) 1fr;
   gap: clamp(34px, 5vw, 74px);
   width: min(88%, var(--max));
-  margin: 56px auto 0;
-  padding: clamp(34px, 4.5vw, 58px);
+  margin: 40px auto 0;
+  padding: clamp(30px, 4vw, 50px);
   align-items: center;
   background: #f1e8dd;
 }
@@ -403,11 +407,11 @@ img {
 
 .value-image img {
   height: auto;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 4.8;
   object-fit: cover;
-  object-position: center 42%;
+  object-position: 34% center;
   border-radius: 8px;
-  box-shadow: 0 18px 42px rgba(32, 25, 19, 0.14);
+  box-shadow: 0 16px 36px rgba(32, 25, 19, 0.12);
 }
 
 .value-content {
@@ -471,7 +475,7 @@ img {
   gap: 56px;
   width: min(84%, 1050px);
   margin: 0 auto;
-  padding: 76px 0 84px;
+  padding: 64px 0 76px;
   align-items: center;
 }
 
@@ -534,7 +538,7 @@ img {
         rgba(18, 15, 12, 0.48)
       ),
       url("value-studio.png");
-    background-size: auto 650px;
+    background-size: auto 580px;
     background-position: right -20px center;
   }
 
@@ -549,7 +553,7 @@ img {
   }
 
   .hero-inner {
-    min-height: 520px;
+    min-height: 500px;
   }
 
   .benefit-grid,
@@ -563,9 +567,9 @@ img {
   }
 
   .value-image img {
-    max-height: 360px;
+    max-height: 320px;
     aspect-ratio: 16 / 10;
-    object-position: center 38%;
+    object-position: 36% center;
   }
 
   .mini-value {
@@ -620,18 +624,18 @@ img {
         rgba(8, 7, 6, 0.88) 100%
       ),
       url("value-studio.png");
-    background-size: auto 560px;
+    background-size: auto 500px;
     background-position: center top;
   }
 
   .hero-inner {
-    min-height: 540px;
+    min-height: 510px;
     align-items: flex-end;
-    padding-bottom: 54px;
+    padding-bottom: 44px;
   }
 
   .hero-text h1 {
-    font-size: 2.85rem;
+    font-size: 2.6rem;
     max-width: 420px;
   }
 
@@ -646,7 +650,7 @@ img {
   }
 
   .process {
-    padding-top: 40px;
+    padding-top: 34px;
   }
 
   .step-top {
@@ -664,18 +668,22 @@ img {
   }
 
   .value-content {
-    padding: 42px 7vw;
+    padding: 0;
   }
 
   .contact {
     gap: 28px;
-    padding: 58px 0 68px;
+    padding: 52px 0 64px;
   }
 }
 
 @media (max-width: 480px) {
   .hero-text h1 {
-    font-size: 2.55rem;
+    font-size: 2.3rem;
+  }
+
+  .hero-section {
+    background-size: auto 460px;
   }
 
   .brand {
