@@ -1,12 +1,14 @@
 :root {
-  --bg: #faf7f2;
+  --bg: #f5f1ea;
+  --panel: #ebe0d2;
   --text: #171717;
   --muted: #625d57;
   --accent: #9f754d;
+  --accent-deep: #7f5734;
   --ink-soft: #39332e;
-  --line: rgba(23, 23, 23, 0.12);
-  --card: rgba(255, 255, 255, 0.68);
-  --shadow: 0 18px 45px rgba(32, 25, 19, 0.09);
+  --line: rgba(127, 87, 52, 0.18);
+  --card: rgba(255, 252, 247, 0.74);
+  --shadow: 0 22px 55px rgba(32, 25, 19, 0.1);
   --max: 1180px;
 }
 
@@ -39,7 +41,7 @@ img {
 
 /* HERO TOP */
 .hero-section {
-  min-height: 630px;
+  min-height: 610px;
   color: #fff;
   background:
     linear-gradient(
@@ -51,7 +53,7 @@ img {
     ),
     url("value-studio.png");
   background-color: #17120d;
-  background-size: min(46vw, 590px) auto;
+  background-size: min(44vw, 560px) auto;
   background-position: right 8vw center;
   background-repeat: no-repeat;
 }
@@ -84,7 +86,7 @@ img {
 
 .brand::before {
   content: "NS";
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Fraunces", serif;
   font-size: 2.35rem;
   line-height: 0.8;
   font-weight: 500;
@@ -118,7 +120,7 @@ img {
 .hero-inner {
   width: min(92%, var(--max));
   margin: 0 auto;
-  min-height: 500px;
+  min-height: 480px;
   display: flex;
   align-items: center;
 }
@@ -131,8 +133,8 @@ img {
 .eyebrow,
 .section-label {
   text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 0.76rem;
+  letter-spacing: 0.15em;
+  font-size: 0.68rem;
   font-weight: 700;
   color: var(--accent);
 }
@@ -146,12 +148,13 @@ img {
 }
 
 .hero-text h1 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(3rem, 4.1vw, 4.35rem);
-  line-height: 1.01;
+  font-family: "Fraunces", serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  letter-spacing: -0.02em;
+  line-height: 0.95;
   font-weight: 600;
-  max-width: 500px;
-  margin-bottom: 20px;
+  max-width: 650px;
+  margin-bottom: 24px;
 }
 
 .hero-text h1 em,
@@ -186,24 +189,38 @@ img {
   border-radius: 8px;
   font-weight: 700;
   font-size: 0.9rem;
+  transition: transform 0.22s ease, background 0.22s ease, border-color 0.22s ease;
+}
+
+.btn:hover {
+  transform: scale(1.02);
 }
 
 .btn-dark {
-  background: #111;
+  background: #101010;
   color: white;
 }
 
+.btn-dark:hover {
+  background: var(--accent-deep);
+}
+
 .btn-light {
-  border: 1px solid rgba(255, 255, 255, 0.58);
-  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(159, 117, 77, 0.78);
+  background: var(--accent);
   color: white;
+}
+
+.btn-light:hover {
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
 }
 
 /* BENEFITS */
 .benefits {
   width: min(92%, var(--max));
   margin: 0 auto;
-  padding: 44px 0 48px;
+  padding: 118px 0 96px;
 }
 
 .center {
@@ -213,29 +230,33 @@ img {
 .benefit-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin-top: 24px;
+  gap: 0;
+  margin-top: 42px;
 }
 
 .benefit-card {
   text-align: center;
-  padding: 34px 24px;
-  border-radius: 8px;
-  border: 1px solid var(--line);
-  background: var(--card);
+  padding: 8px 30px;
+  border-right: 1px solid var(--line);
+}
+
+.benefit-card:last-child {
+  border-right: none;
 }
 
 .icon {
-  width: 58px;
-  height: 58px;
-  border: 1px solid rgba(184, 143, 99, 0.45);
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(159, 117, 77, 0.5);
   color: var(--accent);
   border-radius: 50%;
-  margin: 0 auto 22px;
+  margin: 0 auto 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
 }
 
 .benefit-card h3 {
@@ -254,14 +275,14 @@ img {
 .process {
   width: min(88%, 1050px);
   margin: 0 auto;
-  padding: 46px 0 54px;
+  padding: 96px 0 112px;
   text-align: center;
 }
 
 .process-label {
   text-transform: uppercase;
-  letter-spacing: 0.22em;
-  font-size: 0.76rem;
+  letter-spacing: 0.15em;
+  font-size: 0.68rem;
   font-weight: 700;
   color: var(--text);
   margin-bottom: 28px;
@@ -293,6 +314,8 @@ img {
   align-items: center;
   justify-content: center;
   font-size: 0.95rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
 }
 
 .step-line {
@@ -301,7 +324,7 @@ img {
 }
 
 .process-step h3 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Fraunces", serif;
   font-size: 1.35rem;
   line-height: 1;
   font-weight: 600;
@@ -320,13 +343,14 @@ img {
 .pricing {
   width: min(92%, var(--max));
   margin: 0 auto;
-  padding: 48px 0 54px;
+  padding: 118px 0 112px;
   text-align: center;
 }
 
 .pricing h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.4rem, 3.8vw, 3.6rem);
+  letter-spacing: -0.02em;
   font-weight: 600;
   margin: 10px 0 26px;
 }
@@ -334,7 +358,7 @@ img {
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 24px;
   text-align: left;
 }
 
@@ -344,10 +368,23 @@ img {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .price-card.popular {
-  border-color: rgba(184,143,99,0.8);
+  transform: translateY(-8px);
+  border-color: rgba(159, 117, 77, 0.78);
+  box-shadow: 0 22px 48px rgba(127, 87, 52, 0.13);
+}
+
+.price-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(159, 117, 77, 0.38);
+  box-shadow: 0 18px 42px rgba(32, 25, 19, 0.08);
+}
+
+.price-card.popular:hover {
+  transform: translateY(-10px);
 }
 
 .popular-label {
@@ -368,7 +405,7 @@ img {
 }
 
 .price {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Fraunces", serif;
   font-size: 2.4rem;
   margin-bottom: 20px;
 }
@@ -392,26 +429,37 @@ img {
 /* VALUE */
 .value-contact {
   display: grid;
-  grid-template-columns: minmax(280px, 380px) 1fr;
-  gap: clamp(34px, 5vw, 74px);
+  grid-template-columns: minmax(260px, 350px) 1fr;
+  gap: clamp(30px, 4.6vw, 64px);
   width: min(88%, var(--max));
-  margin: 40px auto 0;
-  padding: clamp(30px, 4vw, 50px);
+  margin: 0 auto;
+  padding: clamp(34px, 4.5vw, 54px);
   align-items: center;
-  background: #f1e8dd;
+  background: var(--panel);
 }
 
 .value-image {
   align-self: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 18px 42px rgba(32, 25, 19, 0.12);
+}
+
+.value-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(23, 18, 13, 0.02), rgba(23, 18, 13, 0.18));
+  pointer-events: none;
 }
 
 .value-image img {
   height: auto;
-  aspect-ratio: 4 / 4.8;
+  aspect-ratio: 4 / 4.7;
   object-fit: cover;
   object-position: 34% center;
   border-radius: 8px;
-  box-shadow: 0 16px 36px rgba(32, 25, 19, 0.12);
 }
 
 .value-content {
@@ -419,11 +467,12 @@ img {
 }
 
 .value-content h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.2rem, 3.4vw, 3.4rem);
-  line-height: 1;
-  max-width: 620px;
-  margin: 10px 0 36px;
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.05rem, 2.75vw, 2.75rem);
+  letter-spacing: -0.02em;
+  line-height: 1.03;
+  max-width: 560px;
+  margin: 10px 0 30px;
   font-weight: 600;
 }
 
@@ -435,7 +484,7 @@ img {
 }
 
 .mini-value {
-  padding: 0 28px;
+  padding: 0 22px;
   border-right: 1px solid rgba(23, 23, 23, 0.12);
 }
 
@@ -450,14 +499,14 @@ img {
 
 .mini-icon {
   color: var(--accent);
-  font-size: 2rem;
+  font-size: 1.65rem;
   line-height: 1;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .mini-values h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.55rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.38rem;
   line-height: 1.05;
   margin-bottom: 12px;
 }
@@ -475,15 +524,16 @@ img {
   gap: 56px;
   width: min(84%, 1050px);
   margin: 0 auto;
-  padding: 64px 0 76px;
+  padding: 118px 0 120px;
   align-items: center;
 }
 
 .contact h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.2rem, 3.7vw, 3.7rem);
-  line-height: 0.98;
-  max-width: 520px;
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.2rem, 3vw, 3.05rem);
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  max-width: 500px;
   margin: 10px 0 20px;
   font-weight: 600;
 }
@@ -514,6 +564,35 @@ img {
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.045);
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn,
+  .price-card,
+  .contact-cards a,
+  .reveal {
+    transition: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .contact-cards span {
   display: block;
   font-size: 0.78rem;
@@ -538,7 +617,7 @@ img {
         rgba(18, 15, 12, 0.48)
       ),
       url("value-studio.png");
-    background-size: auto 580px;
+    background-size: auto 540px;
     background-position: right -20px center;
   }
 
@@ -553,7 +632,7 @@ img {
   }
 
   .hero-inner {
-    min-height: 500px;
+    min-height: 470px;
   }
 
   .benefit-grid,
@@ -567,9 +646,19 @@ img {
   }
 
   .value-image img {
-    max-height: 320px;
+    max-height: 300px;
     aspect-ratio: 16 / 10;
     object-position: 36% center;
+  }
+
+  .benefit-card {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    padding: 28px 0;
+  }
+
+  .benefit-card:last-child {
+    border-bottom: none;
   }
 
   .mini-value {
@@ -624,12 +713,12 @@ img {
         rgba(8, 7, 6, 0.88) 100%
       ),
       url("value-studio.png");
-    background-size: auto 500px;
+    background-size: auto 470px;
     background-position: center top;
   }
 
   .hero-inner {
-    min-height: 510px;
+    min-height: 480px;
     align-items: flex-end;
     padding-bottom: 44px;
   }
@@ -664,7 +753,7 @@ img {
   .pricing h2,
   .value-content h2,
   .contact h2 {
-    font-size: 2.45rem;
+    font-size: 2.25rem;
   }
 
   .value-content {
@@ -673,7 +762,7 @@ img {
 
   .contact {
     gap: 28px;
-    padding: 52px 0 64px;
+    padding: 48px 0 60px;
   }
 }
 
@@ -683,7 +772,7 @@ img {
   }
 
   .hero-section {
-    background-size: auto 460px;
+    background-size: auto 430px;
   }
 
   .brand {
