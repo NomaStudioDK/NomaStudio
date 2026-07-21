@@ -93,7 +93,7 @@ img {
 }
 
 .brand img {
-  width: auto;
+  width: 104px;
   height: auto;
   max-width: 104px;
   max-height: 60px;
@@ -825,16 +825,33 @@ img {
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    min-height: 760px;
+    background:
+      linear-gradient(180deg, rgba(8, 7, 6, 0.72) 0%, rgba(8, 7, 6, 0.62) 38%, rgba(8, 7, 6, 0.9) 100%),
+      url("value-studio.png");
+    background-size: cover;
+    background-position: 58% center;
+    background-repeat: no-repeat;
+  }
+
   .navbar {
-    padding-top: 22px;
+    width: min(88%, var(--max));
+    padding-top: 24px;
     flex-direction: row;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
+  }
+
+  .brand {
+    overflow: hidden;
+    border-radius: 8px;
   }
 
   .brand img {
-    max-width: 92px;
-    max-height: 54px;
+    width: 82px;
+    max-width: 82px;
+    max-height: 48px;
   }
 
   .nav-links {
@@ -851,45 +868,52 @@ img {
   }
 
   .nav-btn {
-    padding: 8px 14px;
-    border-radius: 6px;
-  }
-
-  .hero-section {
-    min-height: auto;
-    background:
-      linear-gradient(
-        180deg,
-        rgba(6, 5, 4, 0.42) 0%,
-        rgba(8, 7, 6, 0.56) 42%,
-        rgba(8, 7, 6, 0.88) 100%
-      ),
-      url("value-studio.png");
-    background-size: auto 470px;
-    background-position: center top;
+    padding: 9px 15px;
+    border-radius: 8px;
+    background: rgba(23, 18, 13, 0.32);
+    backdrop-filter: blur(10px);
   }
 
   .hero-inner {
-    min-height: 480px;
-    align-items: flex-end;
-    padding-bottom: 44px;
+    width: min(88%, var(--max));
+    min-height: 610px;
+    align-items: center;
+    padding: 54px 0 64px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    padding-left: 18px;
+  }
+
+  .hero-text::before {
+    max-height: 350px;
   }
 
   .hero-text h1 {
-    font-size: 2.25rem;
-    max-width: 330px;
-    line-height: 1.02;
+    font-size: clamp(2.45rem, 11vw, 3rem);
+    max-width: 350px;
+    line-height: 1.03;
     letter-spacing: -0.025em;
+    margin-bottom: 24px;
   }
 
   .hero-text > p:not(.eyebrow) {
-    font-size: 0.92rem;
-    max-width: 320px;
+    font-size: 0.96rem;
+    line-height: 1.65;
+    max-width: 340px;
+    margin-bottom: 28px;
   }
 
   .hero-buttons {
     flex-direction: column;
-    max-width: 210px;
+    max-width: 100%;
+    width: min(100%, 340px);
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    min-height: 52px;
   }
 
   .process {
@@ -927,24 +951,32 @@ img {
 }
 
 @media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 2.12rem;
+  .hero-section {
+    min-height: 700px;
+    background-position: 56% center;
   }
 
-  .hero-section {
-    background-size: auto 430px;
+  .brand img {
+    width: 76px;
+    max-width: 76px;
+    max-height: 44px;
   }
 
   .hero-text {
-    padding-left: 18px;
-    max-width: 340px;
+    padding-left: 16px;
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(2.12rem, 10vw, 2.55rem);
+    max-width: 300px;
   }
 
   .hero-text .eyebrow {
-    max-width: 260px;
-    font-size: 0.62rem;
-    letter-spacing: 0.18em;
-    line-height: 1.55;
+    max-width: 255px;
+    font-size: 0.58rem;
+    letter-spacing: 0.17em;
+    line-height: 1.5;
   }
 
   .nav-links {
