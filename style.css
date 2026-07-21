@@ -388,19 +388,30 @@ img {
 /* VALUE */
 .value-contact {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: minmax(300px, 420px) 1fr;
+  gap: clamp(34px, 5vw, 74px);
+  width: min(88%, var(--max));
+  margin: 56px auto 0;
+  padding: clamp(34px, 4.5vw, 58px);
+  align-items: center;
   background: #f1e8dd;
-  margin-top: 30px;
+}
+
+.value-image {
+  align-self: center;
 }
 
 .value-image img {
-  height: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center;
+  object-position: center 42%;
+  border-radius: 8px;
+  box-shadow: 0 18px 42px rgba(32, 25, 19, 0.14);
 }
 
 .value-content {
-  padding: 64px 8vw;
+  padding: 0;
 }
 
 .value-content h2 {
@@ -552,7 +563,8 @@ img {
   }
 
   .value-image img {
-    max-height: 480px;
+    max-height: 360px;
+    aspect-ratio: 16 / 10;
     object-position: center 38%;
   }
 
