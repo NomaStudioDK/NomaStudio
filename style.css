@@ -815,6 +815,19 @@ img {
   color: var(--accent);
 }
 
+.legal-home-btn {
+  padding: 9px 16px;
+  border: 1px solid rgba(159, 117, 77, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 252, 247, 0.48);
+  color: var(--text);
+}
+
+.legal-home-btn:hover {
+  border-color: rgba(159, 117, 77, 0.56);
+  background: rgba(255, 252, 247, 0.76);
+}
+
 .legal-hero {
   max-width: 760px;
   padding-top: 92px;
@@ -1361,6 +1374,10 @@ img {
   .legal-nav-links {
     font-size: 0.76rem;
     gap: 10px 14px;
+  }
+
+  .legal-home-btn {
+    padding: 8px 12px;
   }
 
   .legal-hero {
