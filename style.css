@@ -576,6 +576,31 @@ img {
   font-weight: 650;
 }
 
+.package-link,
+.package-detail-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 28px;
+  color: var(--accent-deep);
+  font-size: 0.84rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(127, 87, 52, 0.26);
+  padding-bottom: 6px;
+}
+
+.package-link span,
+.package-detail-link span {
+  transition: transform 0.22s ease;
+}
+
+.package-link:hover span,
+.package-detail-link:hover span {
+  transform: translateX(4px);
+}
+
 .custom-examples {
   margin-top: 28px;
 }
@@ -1147,6 +1172,17 @@ img {
   margin-bottom: 28px;
 }
 
+.subpage-hero-inner .btn-dark {
+  background: #17120d;
+  color: #fff;
+  border-color: #17120d;
+}
+
+.subpage-hero-inner .btn-dark:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
 .full-process {
   width: min(92%, 1020px);
   margin: 0 auto;
@@ -1279,6 +1315,96 @@ img {
   font-weight: 700;
 }
 
+/* PACKAGES PAGE */
+.package-details {
+  width: min(92%, 1040px);
+  margin: 0 auto;
+  display: grid;
+  gap: 22px;
+}
+
+.package-detail-card {
+  position: relative;
+  padding: clamp(34px, 5vw, 54px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 252, 247, 0.72);
+  box-shadow: 0 18px 52px rgba(32, 25, 19, 0.045);
+}
+
+.package-detail-popular {
+  border-color: rgba(159, 117, 77, 0.7);
+  box-shadow: 0 24px 58px rgba(127, 87, 52, 0.12);
+}
+
+.package-detail-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.package-detail-header h2 {
+  font-family: "Fraunces", serif;
+  font-size: clamp(1.8rem, 3vw, 2.55rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin-top: 10px;
+}
+
+.package-detail-price {
+  font-family: "Fraunces", serif;
+  font-size: clamp(2rem, 3.8vw, 3.1rem);
+  line-height: 1;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.package-detail-intro {
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.72;
+  max-width: 720px;
+  margin-top: 24px;
+}
+
+.package-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 34px;
+  margin-top: 28px;
+}
+
+.package-detail-grid .detail-list {
+  margin: 0;
+}
+
+.package-custom-list {
+  max-width: 680px;
+}
+
+.package-custom-list .custom-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 32px;
+}
+
+.package-payment-box {
+  max-width: 860px;
+  margin: 22px auto 0;
+  padding: 24px 28px;
+  border: 1px solid rgba(159, 117, 77, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 252, 247, 0.62);
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.package-payment-box p + p {
+  margin-top: 8px;
+}
+
 /* RESPONSIVE */
 @media (max-width: 950px) {
   .hero-section {
@@ -1366,6 +1492,16 @@ img {
 
   .process-card {
     gap: 18px;
+  }
+
+  .package-detail-header,
+  .package-detail-grid,
+  .package-custom-list .custom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .package-detail-header {
+    display: grid;
   }
 
   .process-card-top {
@@ -1687,6 +1823,11 @@ img {
     font-size: 0.78rem;
   }
 
+  .package-link {
+    margin-top: 16px;
+    font-size: 0.72rem;
+  }
+
   .payment-note {
     margin-top: 12px;
     padding: 13px 14px;
@@ -1949,6 +2090,55 @@ img {
   .process-cta p,
   .process-cta-info {
     font-size: 0.84rem;
+  }
+
+  .package-details {
+    gap: 14px;
+  }
+
+  .package-detail-card {
+    padding: 24px 20px;
+  }
+
+  .package-detail-header {
+    gap: 14px;
+  }
+
+  .package-detail-header h2 {
+    font-size: clamp(1.45rem, 6vw, 1.9rem);
+  }
+
+  .package-detail-price {
+    font-size: clamp(1.85rem, 8vw, 2.35rem);
+  }
+
+  .package-detail-intro {
+    font-size: 0.86rem;
+    line-height: 1.58;
+    margin-top: 16px;
+  }
+
+  .package-detail-grid {
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .package-custom-list {
+    margin-top: 20px;
+  }
+
+  .package-custom-list .custom-grid div {
+    padding: 11px 0;
+  }
+
+  .package-detail-link {
+    margin-top: 16px;
+    font-size: 0.72rem;
+  }
+
+  .package-payment-box {
+    padding: 18px;
+    font-size: 0.78rem;
   }
 }
 
