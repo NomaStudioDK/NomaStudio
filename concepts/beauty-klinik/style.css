@@ -110,6 +110,30 @@ img {
   transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
+.concept-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 18px;
+  border: 1px solid rgba(135, 98, 56, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 250, 245, 0.54);
+  color: rgba(37, 34, 31, 0.82);
+  backdrop-filter: blur(10px);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.concept-back:hover {
+  transform: translateY(-2px);
+  border-color: rgba(135, 98, 56, 0.38);
+  background: rgba(255, 250, 245, 0.82);
+}
+
 .nav-cta,
 .button.light {
   border: 1px solid rgba(37, 34, 31, 0.22);
@@ -806,6 +830,13 @@ dd {
 
   .nav-cta {
     display: none;
+  }
+
+  .concept-back {
+    order: 4;
+    width: 100%;
+    min-height: 42px;
+    background: rgba(255, 250, 245, 0.9);
   }
 
   .hero,
