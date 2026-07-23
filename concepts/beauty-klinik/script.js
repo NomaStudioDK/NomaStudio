@@ -99,9 +99,9 @@ document.addEventListener("click", (event) => {
   }
 });
 
-if (window.location.hash === "#negle") {
-  const nailsToggle = document.querySelector("#negle [data-price-toggle]");
-  nailsToggle && setPricePanel(nailsToggle, true);
+if (window.location.hash) {
+  const hashToggle = document.querySelector(`${window.location.hash} [data-price-toggle]`);
+  hashToggle && setPricePanel(hashToggle, true);
 }
 
 if (dateInput && timeSelect) {
