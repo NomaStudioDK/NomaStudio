@@ -98,6 +98,10 @@ img {
   display: none;
 }
 
+.mobile-back-link {
+  display: none;
+}
+
 .nav-cta,
 .button {
   display: inline-flex;
@@ -826,6 +830,23 @@ dd {
 
   .nav-links a {
     padding: 10px 8px;
+  }
+
+  .nav-links .mobile-back-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-bottom: 8px;
+    padding: 0 14px;
+    border: 1px solid rgba(135, 98, 56, 0.22);
+    border-radius: 999px;
+    background: rgba(135, 98, 56, 0.1);
+    color: var(--accent-dark);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
   }
 
   .nav-cta {
