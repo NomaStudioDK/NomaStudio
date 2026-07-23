@@ -64,9 +64,9 @@ const updateTimes = () => {
   bookingNote.textContent = "Åbent mandag til fredag kl. 10-16.";
 };
 
-dateInput.addEventListener("change", updateTimes);
+dateInput?.addEventListener("change", updateTimes);
 
-bookingForm.addEventListener("submit", (event) => {
+bookingForm?.addEventListener("submit", (event) => {
   event.preventDefault();
   bookingNote.textContent = "Tak. Din bookingforespørgsel er klar til at blive sendt.";
 });
@@ -84,5 +84,27 @@ menu?.querySelectorAll("a").forEach((link) => {
   });
 });
 
-setMinDate();
-updateTimes();
+const setPricePanel = (toggle, open) => {
+  const card = toggle.closest(".detail-card");
+  toggle.setAttribute("aria-expanded", String(open));
+  card?.classList.toggle("is-open", open);
+};
+
+document.addEventListener("click", (event) => {
+  const toggle = event.target.closest("[data-price-toggle]");
+
+  if (toggle) {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    setPricePanel(toggle, !isOpen);
+  }
+});
+
+if (window.location.hash === "#negle") {
+  const nailsToggle = document.querySelector("#negle [data-price-toggle]");
+  nailsToggle && setPricePanel(nailsToggle, true);
+}
+
+if (dateInput && timeSelect) {
+  setMinDate();
+  updateTimes();
+}

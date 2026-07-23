@@ -18,7 +18,12 @@
         <img src="assets/nord-studio-beauty-logo.png" alt="Nord Studio Beauty logo" />
       </a>
 
-      <div class="nav-links">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+        Menu
+        <span aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-links" id="menu">
         <a href="index.html#ydelser">Ydelser</a>
         <a href="ydelser.html">Behandlinger</a>
         <a href="index.html#booking">Booking</a>
@@ -36,8 +41,12 @@
   </header>
 
   <main class="service-details">
-    <article class="detail-card">
-      <span>01</span>
+    <article class="detail-card detail-card--interactive" id="negle">
+      <button class="detail-toggle" type="button" aria-expanded="false" aria-controls="negle-priser" data-price-toggle>
+        <span>01</span>
+        <span class="toggle-text">Se prisliste</span>
+      </button>
+      <img src="assets/service-negle.png" alt="Neglebehandling hos Nord Studio Beauty" />
       <h2>Negle</h2>
       <p>Til dig der ønsker velplejede hænder med et rent og holdbart udtryk.</p>
       <ul>
@@ -46,9 +55,36 @@
         <li>Fransk, nude eller diskret nail art</li>
         <li>Reparation og opfriskning</li>
       </ul>
+      <div class="price-list" id="negle-priser">
+        <div>
+          <span>Klassisk manicure</span>
+          <strong>350 kr</strong>
+        </div>
+        <div>
+          <span>Gel polish</span>
+          <strong>450 kr</strong>
+        </div>
+        <div>
+          <span>Gel forstærkning</span>
+          <strong>595 kr</strong>
+        </div>
+        <div>
+          <span>Fransk manicure</span>
+          <strong>525 kr</strong>
+        </div>
+        <div>
+          <span>Nail art</span>
+          <strong>Fra 75 kr</strong>
+        </div>
+        <div>
+          <span>Aftagning + pleje</span>
+          <strong>295 kr</strong>
+        </div>
+      </div>
     </article>
 
     <article class="detail-card">
+      <img src="assets/service-vipper.png" alt="Vippebehandling hos Nord Studio Beauty" />
       <span>02</span>
       <h2>Vipper</h2>
       <p>Behandlinger der åbner blikket uden at føles tunge eller overdrevne.</p>
@@ -61,6 +97,7 @@
     </article>
 
     <article class="detail-card">
+      <img src="assets/service-bryn.png" alt="Brynbehandling hos Nord Studio Beauty" />
       <span>03</span>
       <h2>Bryn</h2>
       <p>Form og farve tilpasset ansigtet, så brynene føles naturlige og veldefinerede.</p>
@@ -73,6 +110,7 @@
     </article>
 
     <article class="detail-card">
+      <img src="assets/service-frisor.png" alt="Frisørbehandling hos Nord Studio Beauty" />
       <span>04</span>
       <h2>Frisør</h2>
       <p>Hårbehandlinger med fokus på sundt hår, rolige linjer og personlig styling.</p>
@@ -100,5 +138,7 @@
     <p>© 2026 Nord Studio Beauty · Konceptprojekt</p>
     <a href="index.html">Forside</a>
   </footer>
+
+  <script src="script.js?v=4"></script>
 </body>
 </html>
