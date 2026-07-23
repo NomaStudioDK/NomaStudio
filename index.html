@@ -23,7 +23,12 @@
         <img src="nomastudio-logo-dark.svg" alt="Noma Studio Web Design logo" />
       </a>
 
-      <div class="nav-links">
+      <button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false">
+        <span>Menu</span>
+        <span class="menu-lines" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-links" id="site-menu">
         <a href="#fordele">Fordele</a>
         <a href="proces.html">Proces</a>
         <a href="pakker.html">Pakker</a>
@@ -146,16 +151,11 @@
       <div class="pricing-grid">
         <article class="price-card">
           <h3>Starter</h3>
-          <p class="price">3.995 kr</p>
-          <p class="price-description">
-            Til nye virksomheder og selvstændige, der har brug for en skarp og enkel
-            hjemmeside.
-          </p>
+          <p class="price">Fra 3.995 kr</p>
           <ul class="price-features">
-            <li><span class="feature-icon">✓</span>Skræddersyet design</li>
+            <li><span class="feature-icon">✓</span>One-page hjemmeside</li>
             <li><span class="feature-icon">✓</span>Responsiv hjemmeside</li>
-            <li><span class="feature-icon">✓</span>Op til 5 sider</li>
-            <li><span class="feature-icon">✓</span>Kontaktformular</li>
+            <li><span class="feature-icon">✓</span>Kontakt sektion</li>
           </ul>
           <a href="pakker.html#starter" class="package-link">Læs mere om Starter <span aria-hidden="true">→</span></a>
         </article>
@@ -163,16 +163,11 @@
         <article class="price-card popular">
           <span class="popular-label">Populær</span>
           <h3>Business</h3>
-          <p class="price">6.995 kr</p>
-          <p class="price-description">
-            Til virksomheder, der ønsker flere sider, stærkere struktur og mere
-            sparring undervejs.
-          </p>
+          <p class="price">Fra 6.995 kr</p>
           <ul class="price-features">
-            <li><span class="feature-icon">✓</span>Skræddersyet design</li>
-            <li><span class="feature-icon">✓</span>Op til 10 sider</li>
-            <li><span class="feature-icon">✓</span>Avanceret SEO</li>
-            <li><span class="feature-icon">✓</span>Sparring og support undervejs</li>
+            <li><span class="feature-icon">✓</span>Flere sider eller sektioner</li>
+            <li><span class="feature-icon">✓</span>Custom design</li>
+            <li><span class="feature-icon">✓</span>Opsætning og launch</li>
           </ul>
           <a href="pakker.html#business" class="package-link">Læs mere om Business <span aria-hidden="true">→</span></a>
         </article>
@@ -180,15 +175,10 @@
         <article class="price-card">
           <h3>Custom</h3>
           <p class="price">Efter aftale</p>
-          <p class="price-description">
-            Til løsninger med særlige funktioner, integrationer eller et større
-            digitalt setup.
-          </p>
           <ul class="price-features">
-            <li><span class="feature-icon">✓</span>Specialfunktioner</li>
-            <li><span class="feature-icon">✓</span>Booking, webshop eller integrationer</li>
+            <li><span class="feature-icon">✓</span>Skræddersyet løsning</li>
+            <li><span class="feature-icon">✓</span>Ekstra funktioner</li>
             <li><span class="feature-icon">✓</span>Design efter behov</li>
-            <li><span class="feature-icon">✓</span>Teknisk sparring</li>
           </ul>
           <a href="pakker.html#custom" class="package-link">Læs mere om Custom <span aria-hidden="true">→</span></a>
         </article>
@@ -396,6 +386,22 @@
     );
 
     revealItems.forEach((item) => revealObserver.observe(item));
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const siteMenu = document.querySelector("#site-menu");
+
+    menuToggle?.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      siteMenu?.classList.toggle("is-open", !isOpen);
+    });
+
+    siteMenu?.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menuToggle?.setAttribute("aria-expanded", "false");
+        siteMenu.classList.remove("is-open");
+      });
+    });
 
     document.querySelectorAll(".faq-question").forEach((button) => {
       button.addEventListener("click", () => {
